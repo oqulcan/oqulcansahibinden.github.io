@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vasıta İlanları</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background-color: #666;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+            position: relative;
+            overflow: hidden;
+            color: #fff;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            position: relative;
+            z-index: 1;
+        }
+        .logo h1 {
+            color: #fff;
+            font-size: 24px;
+            margin: 0;
+            padding: 5px 10px;
+            border: 2px solid #ffdd01;
+            border-radius: 4px;
+            display: inline-block;
+        }
+        .search-bar {
+            flex: 1;
+            text-align: right;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        .search-bar form {
+            display: inline-block;
+            position: relative;
+        }
+        .search-bar input[type="text"] {
+            width: 200px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            transition: width 0.3s ease-in-out;
+        }
+        .search-bar input[type="text"]:focus {
+            width: 300px;
+        }
+        .search-bar input[type="submit"] {
+            padding: 10px 20px;
+            border: none;
+            background-color: #fbff00;
+            border-radius: 4px;
+            cursor: pointer;
+            color: #333;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .search-bar input[type="submit"]:hover {
+            background-color: #ffdd01;
+        }
+        .add-ad-button {
+            margin-left: 10px;
+            padding: 10px 20px;
+            border: 1px solid #ddd;
+            background-color: #4CAF50;
+            border-radius: 4px;
+            cursor: pointer;
+            color: white;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .add-ad-button:hover {
+            background-color: #45a049;
+        }
+        .main-container {
+            display: flex;
+            margin-top: 20px;
+        }
+        .categories {
+            width: 20%;
+            padding: 20px;
+            background-color: #f8f8f8;
+            border-right: 1px solid #ddd;
+        }
+        .categories h2 {
+            margin-bottom: 20px;
+        }
+        .categories ul {
+            list-style: none;
+            padding: 0;
+        }
+        .categories li {
+            margin-bottom: 10px;
+        }
+        .categories a {
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #f0f0f0;
+            border-radius: 4px;
+            color: #333;
+            display: block;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .categories a:hover {
+            background-color: #ddd;
+            color: #000;
+        }
+        .featured-ads {
+            width: 80%;
+            padding: 20px;
+        }
+        .featured-ads h2 {
+            margin-bottom: 20px;
+        }
+        .ads {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .ad-item {
+            flex: 1 1 calc(25% - 20px);
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 4px;
+            background-color: #fff;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+        .ad-item img {
+            max-width: 100%;
+            height: auto;
+            transition: transform 0.3s ease-in-out;
+        }
+        .ad-item h3 {
+            margin: 10px 0;
+            font-size: 18px;
+            transition: color 0.3s ease-in-out;
+        }
+        .ad-item p {
+            color: #999;
+            transition: color 0.3s ease-in-out;
+        }
+        .ad-item:hover {
+            transform: scale(1.1);
+            z-index: 1;
+        }
+        .ad-item:hover img {
+            transform: scale(1.1);
+        }
+        .ad-item:hover h3, .ad-item:hover p {
+            color: #000;
+        }
+        footer {
+            background-color: #f8f8f8;
+            padding: 20px 0;
+            text-align: center;
+            border-top: 1px solid #ddd;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Sahibinden.com</h1>
+            </div>
+            <div class="search-bar">
+                <div class="advanced-search">
+                    <a href="#">Detaylı Arama</a>
+                </div>
+                <form action="#" method="get">
+                    <input type="text" placeholder="Ara...">
+                    <input type="submit" value="Ara">
+                </form>
+                <div class="add-ad-button">
+                    <a href="#">İlan Ver</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="main-container">
+            <aside class="categories">
+                <h2>Kategoriler</h2>
+                <ul>
+                    <li><a href="sahib.html">Ana Sayfa</a></li>
+                    <li><a href="emlak.html">Emlak</a></li>
+                    <li><a href="vasıta.html">Vasıta</a></li>
+                    <li><a href="ikincielvesıfıralısveris.html">İkinci El ve Sıfır Alışveriş</a></li>
+                    <li><a href="yedekparça.html">Yedek Parça</a></li>
+                    <li><a href="ismakineleri.html">İş Makineleri</a></li>
+                    <li><a href="ustalar.html">Ustalar ve Hizmetler</a></li>
+                </ul>
+            </aside>
+            <section class="featured-ads">
+                <h2>Vasıta İlanları</h2>
+                <div class="ads">
+                    <div class="ad-item">
+                        <img src="sahibindenweb/clio.jpeg" alt="Vasıta İlanı 1">
+                        <h3>Satılık Araba</h3>
+                        <p>Az kullanılmış, uygun fiyatlı araba.</p>
+                    </div>
+                    <div class="ad-item">
+                        <img src="sahibindenweb/araba.jpg" alt="Vasıta İlanı 2">
+                        <h3>Kiralık Araç</h3>
+                        <p>Günlük kiralık, sigortalı araçlar.</p>
+                    </div>
+                    <div class="ad-item">
+                        <img src="sahibindenweb/motor.jpg" alt="Vasıta İlanı 3">
+                        <h3>Satılık Motosiklet</h3>
+                        <p>Hız tutkunları için, bakımlı motosiklet.</p>
+                    </div>
+                    <div class="ad-item">
+                        <img src="sahibindenweb/mini.jpg" alt="Vasıta İlanı 4">
+                        <h3>Kiralık Minibüs</h3>
+                        <p>Şehir içi ve şehirler arası kiralık minibüsler.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Sahibinden.com Benzeri. Tüm hakları saklıdır.</p>
+    </footer>
+</body>
+</html>
